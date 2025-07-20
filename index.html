@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEBEL ID - Furnitur Berkualitas untuk Rumah Anda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS with woody theme */
+        :root {
+            --wood-primary: #8B5A2B;    /* Classic oak (primary wood color) */
+            --wood-secondary: #A67C52;  /* Lighter oak */
+            --wood-light: #E1C7A7;      /* Light beech wood */
+            --wood-dark: #5D4037;       /* Dark walnut */
+            --wood-accent: #B88A57;     /* Golden oak accent */
+            --wood-bg: #eedbc0;         /* Creamy off-white background */
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(111, 78, 55, 0.3);
+            border: 1px solid var(--wood-accent);
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: var(--wood-accent);
+            transition: width .3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .prose h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--wood-dark);
+        }
+
+        .prose p {
+            margin-bottom: 1rem;
+            color: var(--wood-secondary);
+        }
+
+        .prose ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .prose li {
+            margin-bottom: 0.5rem;
+            color: var(--wood-secondary);
+        }
+        
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans bg-wood-bg">
+    <!-- Header/Navigation -->
+    <header class="bg-black shadow-md text-white">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-couch text-2xl text-white mr-3"></i>
+                <h1 class="text-2xl font-bold text-white">MEBEL ID</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-wood-light hover:text-white font-medium transition duration-300">Beranda</a>
+                <a href="#products" class="nav-link text-wood-light hover:text-white font-medium transition duration-300">Produk</a>
+                <a href="#articles" class="nav-link text-wood-light hover:text-white font-medium transition duration-300">Perawatan</a>
+                <a href="#contact" class="nav-link text-wood-light hover:text-white font-medium transition duration-300">Kontak</a>
+            </nav>
+            
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 hover:text-amber-700 focus:outline-none transition duration-300">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black shadow-lg">
+            <a href="#home" class="block py-3 px-6 text-white hover:bg-gray-800 transition duration-300">Beranda</a>
+            <a href="#products" class="block py-3 px-6 text-white hover:bg-gray-800 transition duration-300">Produk</a>
+            <a href="#articles" class="block py-3 px-6 text-white hover:bg-gray-800 transition duration-300">Perawatan</a>
+            <a href="#contact" class="block py-3 px-6 text-white hover:bg-gray-800 transition duration-300">Kontak</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Furnitur Kayu Berkualitas untuk Rumah Anda</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Temukan furnitur kayu buatan tangan yang dirancang untuk bertahan seumur hidup</p>
+            <a href="#products" class="bg-wood-primary hover:bg-wood-dark text-white px-8 py-3 rounded-md font-medium inline-block transition duration-300">Lihat Koleksi</a>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 text-wood-dark">Belanja Berdasarkan Kategori</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                <a href="#products" class="category-card bg-gray-100 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+                    <div class="p-6 text-center">
+                        <i class="fas fa-chair text-4xl text-amber-700 mb-3"></i>
+                        <h3 class="font-medium text-gray-800">Chairs</h3>
+                    </div>
+                </a>
+                
+                <a href="#products" class="category-card bg-gray-100 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+                    <div class="p-6 text-center">
+                        <i class="fas fa-utensils text-4xl text-amber-700 mb-3"></i>
+                        <h3 class="font-medium text-gray-800">Dining</h3>
+                    </div>
+                </a>
+                
+                <a href="#products" class="category-card bg-gray-100 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+                    <div class="p-6 text-center">
+                        <i class="fas fa-couch text-4xl text-amber-700 mb-3"></i>
+                        <h3 class="font-medium text-gray-800">Sofas</h3>
+                    </div>
+                </a>
+                
+                <a href="#products" class="category-card bg-gray-100 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+                    <div class="p-6 text-center">
+                        <i class="fas fa-bed text-4xl text-amber-700 mb-3"></i>
+                        <h3 class="font-medium text-gray-800">Bedroom</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Katalog Produk -->
+    <section id="products" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 text-wood-dark">Koleksi Furnitur Kami</h2>
+            <p class="text-center text-wood-secondary max-w-2xl mx-auto mb-12">Dibuat dengan tangan menggunakan bahan premium dan perhatian pada detail</p>
+            
+            <!-- Kontrol Filter (Dasar) -->
+            <div class="flex justify-center mb-8">
+                <div class="inline-flex rounded-md shadow-sm" role="group">
+                    <button type="button" class="filter-btn px-4 py-2 text-sm font-medium rounded-l-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-amber-500" data-filter="all">
+                        Semua
+                    </button>
+                    <button type="button" class="filter-btn px-4 py-2 text-sm font-medium border-t border-b border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-amber-500" data-filter="chairs">
+                        Kursi
+                    </button>
+                    <button type="button" class="filter-btn px-4 py-2 text-sm font-medium border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-amber-500" data-filter="tables">
+                        Meja
+                    </button>
+                    <button type="button" class="filter-btn px-4 py-2 text-sm font-medium border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-amber-500" data-filter="sofa">
+                        Sofa
+                    </button>
+                    <button type="button" class="filter-btn px-4 py-2 text-sm font-medium rounded-r-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-amber-500" data-filter="bedroom">
+                        Kamar Tidur
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Tampilan Grid Produk -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 6 Produk Pertama -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="chairs">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1658211312038-4293c7bdd37e?q=80&w=1180&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kursi Rotan Vintage" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-amber-700 text-white text-xs font-bold px-2 py-1 rounded">Baru</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Kursi Rotan Vintage</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(24 ulasan)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Desain klasik bergaya mid-century dengan rangka kayu jati solid dan anyaman rotan alami. Memberikan sentuhan hangat dan estetika natural, serta kenyamanan duduk yang breathable untuk ruang santai Anda.</p>
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500"><strong>Material:</strong> Kayu jati, Rotan alami</p>
+                            <p class="text-sm text-gray-500"><strong>Dimensions:</strong> 74cm (L) × 79cm (D) × 84cm (T)</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-gray-800">Rp4.999.000</span>
+                            <button class="inquire-btn bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300" data-product="Modern Lounge Chair">
+                                Hubungi Kami
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="tables">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1636138388621-258a72ecb07e?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Meja Makan Kayu Natural" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Meja Makan Kayu Natural</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(18 ulasan)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Meja makan bergaya minimalis dengan permukaan kayu solid bertekstur alami dan kaki penyangga tebal yang kokoh. Desainnya yang bersih dan hangat cocok untuk ruang makan modern maupun tradisional.</p>
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500"><strong>Material:</strong> Kayu jati solid</p>
+                            <p class="text-sm text-gray-500"><strong>Dimensions:</strong> 180cm (P) × 90cm (L) × 75cm (T)</p>
+                            <p class="text-sm text-gray-500"><strong>Capacity:</strong> 6 orang</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-gray-800">Rp6.750.000</span>
+                            <button class="inquire-btn bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300" data-product="Solid Wood Dining Table">
+                                Hubungi Kami
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="sofa">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1696778382637-21ec8b69a149?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sofa Tiga Dudukan Modern" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">Sale</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Sofa Tiga Dudukan Modern</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(32 ulasan)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Sofa berdesain modern dengan siluet tegas dan sandaran rendah, dilapisi kain abu-abu muda yang lembut dan elegan. Cocok untuk ruang tamu bergaya minimalis hingga kontemporer, memberikan kenyamanan sekaligus kesan premium.</p>
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500"><strong>Material:</strong> Rangka kayu solid, Busa high-density, Kain woven premium</p>
+                            <p class="text-sm text-gray-500"><strong>Dimensions:</strong> 210cm (P) × 85cm (L) × 75cm (T)</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-xl font-bold text-gray-800">Rp7.550.000</span>
+                                <span class="text-sm text-gray-500 line-through ml-2">Rp7.950.000</span>
+                            </div>
+                            <button class="inquire-btn bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300" data-product="Vintage Bookshelf">
+                                Hubungi Kami
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="chairs">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1627357058327-1b0de8aa52b3?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kursi Rotan Santai Modern" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Kursi Rotan Santai Modern</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(14 ulasan)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Perpaduan sempurna antara desain tropis dan kenyamanan modern. Terbuat dari anyaman rotan alami dan bantalan empuk berwarna netral, kursi ini cocok untuk ruang tamu, balkon, maupun sudut baca favorit Anda.</p>
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500"><strong>Material:</strong> Rotan alami, Busa, Kain linen</p>
+                            <p class="text-sm text-gray-500"><strong>Dimensions:</strong> 70cm (L) × 75cm (D) × 85cm (T)</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-gray-800">Rp3.450.000</span>
+                            <button class="inquire-btn bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300" data-product="Accent Armchair">
+                                Hubungi Kami
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="tables">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1647967527216-adea2f078e07?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Meja Kopi Kayu Minimalis" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Meja Kopi Kayu Minimalis</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(9 ulasan)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Meja kopi berbentuk oval dengan desain ramping dan kaki melengkung khas gaya Jepang modern. Permukaan kayu halus memberikan kesan hangat dan natural, ideal untuk ruang tamu yang simpel namun elegan.</p>
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500"><strong>Material:</strong> Kayu solid finishing natural, Tempered glass</p>
+                            <p class="text-sm text-gray-500"><strong>Dimensions:</strong> 110cm (P) × 60cm (L) × 40cm (T)</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-gray-800">Rp2.350.000</span>
+                            <button class="inquire-btn bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300" data-product="Coffee Table with Storage">
+                                Hubungi Kami
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="sofa">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1619389735429-fe80000e7e53?q=80&w=1661&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sofa Ukir Etnik Kayu Jati" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Sofa Ukir Etnik Kayu Jati</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(27 ulasan)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Sofa khas bergaya tradisional dengan ukiran tangan yang rumit dan penuh karakter. Terbuat dari kayu jati tua yang kokoh dan dilengkapi bantal-bantal warna-warni dengan motif etnik, cocok untuk ruangan bergaya klasik, bohemian, atau nuansa budaya Timur.</p>
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500"><strong>Material:</strong> Kayu jati ukir, Bantal beludru & brokat</p>
+                            <p class="text-sm text-gray-500"><strong>Dimensions:</strong> 180cm (P) × 70cm (L) × 100cm (T)</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-gray-800">Rp9.750.000</span>
+                            <button class="inquire-btn bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300" data-product="Modern Wardrobe">
+                                Hubungi Kami
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produk Tersembunyi (7-12) -->
+                <div class="product-card hidden bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="bedroom">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1688384452844-8364c3e2fc28?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tempat Tidur Minimalis Kayu Solid" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-amber-700 text-white text-xs font-bold px-2 py-1 rounded">Best Seller</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Tempat Tidur Minimalis Kayu Solid</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(45 ulasan)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Desain modern minimalis dengan struktur kayu solid memberikan tampilan bersih dan elegan untuk kamar tidur Anda. Dilengkapi sandaran kepala rendah dan rangka kokoh yang menyatu sempurna dengan gaya interior natural, skandinavia, maupun Japandi.</p>
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500"><strong>Material:</strong> Kayu oak solidd</p>
+                            <p class="text-sm text-gray-500"><strong>Dimensions:</strong> 200cm (P) × 160cm (L) × 35cm (T) (ukuran kasur queen)</p>
+                            <p class="text-sm text-gray-500"><strong>Feature:</strong> Rangka rendah, cocok untuk kasur tanpa springbox</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-gray-800">Rp6.450.000</span>
+                            <button class="inquire-btn bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300" data-product="Luxury Wooden Bed Frame">
+                                Hubungi Kami
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 8 - Kursi -->
+                <div class="product-card hidden bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="chairs">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://plus.unsplash.com/premium_photo-1680112806039-244731d88d45?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kursi Minimalis Skandinavia" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Kursi Minimalis Skandinavia</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(31 ulasan)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Menampilkan estetika simpel khas Skandinavia, kursi ini dibuat dari kayu solid dengan sentuhan akhir halus dan dilengkapi bantalan empuk untuk kenyamanan optimal. Cocok untuk ruang tamu modern atau ruang kerja bergaya clean.</p>
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500"><strong>Material:</strong> Kayu solid, Busa, Kain linen</p>
+                            <p class="text-sm text-gray-500"><strong>Dimensions:</strong> 68cm (L) × 72cm (D) × 80cm (T)</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-gray-800">Rp3.899.000</span>
+                            <button class="inquire-btn bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300" data-product="Mid-Century Dining Chair">
+                                Hubungi Kami
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 9 - Tempat Tidur -->
+                <div class="product-card hidden bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="bedroom">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1724093830116-28a3c4a5a3eb?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tempat Tidur Ukiran Kayu Antik" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">Eco-Friendly</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Tempat Tidur Ukiran Kayu Antik</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(28 ulasan)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Tempat tidur dengan ukiran kayu bergaya klasik ini menghadirkan nuansa mewah dan elegan dalam kamar tidur Anda. Dibuat dari kayu solid berkualitas tinggi dengan detail ukiran tangan yang rumit, tempat tidur ini memancarkan kehangatan dan karakter khas desain vintage. Sandaran kepala yang tinggi dengan lekukan artistik memberikan kesan megah tanpa terasa berlebihan.</p>
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500"><strong>Material:</strong> Kayu solid ukiran tangan</p>
+                            <p class="text-sm text-gray-500"><strong>Dimensions:</strong> 200cm (P) × 180cm (L) × 120cm (T) (ukuran king)</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-gray-800">Rp8.900.000</span>
+                            <button class="inquire-btn bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300" data-product="Modern Platform Bed">
+                                Hubungi Kami
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 10 - Sofa -->
+                <div class="product-card hidden bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="sofa">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1567538096621-38d2284b23ff?q=80&w=1972&auto=format&fit=crop" alt="Sofa Sectional Modern" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-amber-700 text-white text-xs font-bold px-2 py-1 rounded">Premium</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Sofa Sectional Modern</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(37 ulasan)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Sofa sectional modular yang dapat disesuaikan dengan kebutuhan ruang Anda. Dilengkapi dengan sandaran yang dapat diatur dan bantal ekstra untuk kenyamanan maksimal.</p>
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500"><strong>Material:</strong> Rangka kayu oak, Busa premium, Kain beludru</p>
+                            <p class="text-sm text-gray-500"><strong>Dimensions:</strong> 320cm (P) × 180cm (L) × 85cm (T)</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-gray-800">Rp12.999.000</span>
+                            <button class="inquire-btn bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300" data-product="Sofa Sectional Modern">
+                                Hubungi Kami
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 11 - Meja -->
+                <div class="product-card hidden bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="tables">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?q=80&w=1969&auto=format&fit=crop" alt="Meja Makan Marmer" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded">Limited</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Meja Makan Marmer</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(22 ulasan)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Meja makan mewah dengan permukaan marmer Italia asli dan kaki logam berlapis emas. Desain kontemporer yang menjadi focal point ruang makan Anda.</p>
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500"><strong>Material:</strong> Marmer Italia, Rangka besi premium</p>
+                            <p class="text-sm text-gray-500"><strong>Dimensions:</strong> 200cm (P) × 100cm (L) × 75cm (T)</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-gray-800">Rp15.750.000</span>
+                            <button class="inquire-btn bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300" data-product="Meja Makan Marmer">
+                                Hubungi Kami
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 12 - Tempat Tidur -->
+                <div class="product-card hidden bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="bedroom">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2070&auto=format&fit=crop" alt="Tempat Tidur Platform Modern" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">Custom</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Tempat Tidur Platform Modern</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(19 ulasan)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Tempat tidur platform bergaya Jepang modern dengan lampu LED terintegrasi dan laci penyimpanan tersembunyi. Ideal untuk ruang tidur kontemporer.</p>
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500"><strong>Material:</strong> Kayu maple solid, LED strip</p>
+                            <p class="text-sm text-gray-500"><strong>Dimensions:</strong> 210cm (P) × 180cm (L) × 45cm (T)</p>
+                            <p class="text-sm text-gray-500"><strong>Features:</strong> Lampu LED, 4 laci penyimpanan</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-gray-800">Rp9.999.000</span>
+                            <button class="inquire-btn bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300" data-product="Tempat Tidur Platform Modern">
+                                Hubungi Kami
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button id="view-all-products" class="bg-white border border-amber-700 text-amber-700 hover:bg-amber-50 px-6 py-3 rounded-md font-medium transition duration-300">
+                    View All Products
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Furniture Care Guides -->
+    <section id="articles" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 text-wood-dark">Panduan Perawatan Furnitur</h2>
+            <p class="text-center text-wood-secondary max-w-2xl mx-auto mb-12">Pelajari cara merawat furnitur Anda agar tetap indah selama bertahun-tahun</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80" alt="Perawatan Furnitur Kayu" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-amber-700 uppercase">Pemeliharaan</span>
+                        <h3 class="text-xl font-bold text-gray-800 my-2">Perawatan Furnitur Kayu</h3>
+                        <p class="text-gray-600 mb-4">Pelajari cara terbaik untuk membersihkan, memoles, dan melindungi furnitur kayu Anda agar tetap indah.</p>
+                        <a href="#" class="text-amber-700 font-medium hover:text-amber-800 inline-flex items-center">
+                            Baca Panduan
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Article 2 -->
+                <article class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Tips Membersihkan Pelapis Furnitur" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-amber-700 uppercase">Pembersihan</span>
+                        <h3 class="text-xl font-bold text-gray-800 my-2">Tips Membersihkan Pelapis Furnitur</h3>
+                        <p class="text-gray-600 mb-4">Temukan cara tepat membersihkan berbagai jenis pelapis furnitur agar tetap bersih dan bebas noda.</p>
+                        <a href="#" class="text-amber-700 font-medium hover:text-amber-800 inline-flex items-center">
+                            Baca Panduan
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Article 3 -->
+                <article class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Menata Ruangan Kecil" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-amber-700 uppercase">Desain</span>
+                        <h3 class="text-xl font-bold text-gray-800 my-2">Menata Ruangan Kecil</h3>
+                        <p class="text-gray-600 mb-4">Tips ahli dalam memilih dan menata furnitur untuk memaksimalkan ruang dan fungsi di ruangan yang lebih kecil.</p>
+                        <a href="#" class="text-amber-700 font-medium hover:text-amber-800 inline-flex items-center">
+                            Baca Panduan
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inquiry Form -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-amber-700 p-8 text-white">
+                        <h2 class="text-2xl font-bold mb-4">Ada Pertanyaan?</h2>
+                        <p class="mb-6">Kami siap membantu! Kirim pertanyaan Anda tentang ketersediaan produk, harga, atau opsi kustomisasi.</p>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-phone-alt mr-4"></i>
+                                <span>+62 851-5542-0887</span>
+                            </div>
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-envelope mr-4"></i>
+                                <span>info@mebelid.com</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt mr-4"></i>
+                                <span>Jl. Soekarno-Hatta No.378, Kb. Lega, Kec. Bojongloa Kidul, Kota Bandung, Jawa Barat 40235</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-white hover:text-gray-200">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="text-white hover:text-gray-200">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-white hover:text-gray-200">
+                                <i class="fab fa-pinterest"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h2>
+                        <form id="inquiry-form">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 text-sm font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="e.g. John Doe" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 text-sm font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="e.g. john@example.com" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 text-sm font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="e.g. 081234567890" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="product" class="block text-gray-700 text-sm font-medium mb-2">Product of Interest</label>
+                                <input type="text" id="product" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="e.g. Kursi Jati Minimalis" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 text-sm font-medium mb-2">Your Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="e.g. Saya tertarik dengan produk ini. Mohon informasikan ketersediaan dan apakah ada diskon untuk pembelian dalam jumlah besar." required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-amber-700 hover:bg-amber-800 text-white py-2 px-4 rounded-md font-medium transition duration-300">
+                                Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inquiry Modal -->
+    <div id="inquiry-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold text-gray-800">Inquire About <span id="modal-product-name"></span></h3>
+                <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="product-inquiry-form">
+                <input type="hidden" id="inquiry-product">
+                <div class="mb-4">
+                    <label for="modal-name" class="block text-gray-700 text-sm font-medium mb-2">Your Name</label>
+                    <input type="text" id="modal-name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="e.g. John Doe" required>
+                </div>
+                <div class="mb-4">
+                    <label for="modal-email" class="block text-gray-700 text-sm font-medium mb-2">Email Address</label>
+                    <input type="email" id="modal-email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="e.g. john@example.com" required>
+                </div>
+                <div class="mb-4">
+                    <label for="modal-phone" class="block text-gray-700 text-sm font-medium mb-2">Phone Number</label>
+                    <input type="tel" id="modal-phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="e.g. 081234567890" required>
+                </div>
+                <div class="mb-6">
+                    <label for="modal-message" class="block text-gray-700 text-sm font-medium mb-2">Your Message</label>
+                    <textarea id="modal-message" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" required>I'm interested in this product. Please provide more information about availability and pricing.</textarea>
+                </div>
+                <button type="submit" class="w-full bg-amber-700 hover:bg-amber-800 text-white py-2 px-4 rounded-md font-medium transition duration-300">
+                    Send Inquiry
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Panduan Perawatan -->
+    <div id="care-guide-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-800" id="guide-title"></h3>
+                <button id="close-guide-modal" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="mb-6">
+                <img id="guide-image" src="" alt="" class="w-full h-64 object-cover rounded-lg">
+            </div>
+            <div id="guide-content" class="prose max-w-none">
+                <!-- Content will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Sukses -->
+    <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4 text-center">
+            <div class="text-green-500 text-5xl mb-4">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Inquiry Sent Successfully!</h3>
+            <p class="text-gray-600 mb-6">Thank you for your interest. Our team will get back to you within 24 hours.</p>
+            <button id="close-success-modal" class="bg-amber-700 hover:bg-amber-800 text-white py-2 px-6 rounded-md font-medium transition duration-300">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-couch text-3xl text-white mr-3"></i>
+                        <h3 class="text-2xl font-bold">MEBEL ID</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">Furnitur berkualitas untuk rumah dan kantor Anda.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white text-xl">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white text-xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition duration-300">Beranda</a></li>
+                        <li><a href="#products" class="text-gray-300 hover:text-white transition duration-300">Produk</a></li>
+                        <li><a href="#articles" class="text-gray-300 hover:text-white transition duration-300">Perawatan</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition duration-300">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Layanan Pelanggan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300">Returns & Exchanges</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Buletin</h4>
+                    <p class="text-gray-400 mb-4">Berlangganan untuk menerima pembaruan tentang produk baru dan penawaran khusus.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-md focus:outline-none text-gray-800">
+                        <button type="submit" class="bg-amber-600 hover:bg-amber-700 px-4 py-2 rounded-r-md">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-8 text-center text-gray-300">
+                <p>&copy; 2025 MEBEL ID. Seluruh hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu mobile toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Product filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-amber-700', 'text-white');
+                    btn.classList.add('bg-white', 'text-gray-700');
+                });
+                
+                // Add active class to clicked button
+                button.classList.remove('bg-white', 'text-gray-700');
+                button.classList.add('bg-amber-700', 'text-white');
+                
+                const filter = button.getAttribute('data-filter');
+                
+                productCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Inquiry modal
+        const inquireButtons = document.querySelectorAll('.inquire-btn');
+        const inquiryModal = document.getElementById('inquiry-modal');
+        const closeModal = document.getElementById('close-modal');
+        const modalProductName = document.getElementById('modal-product-name');
+        const inquiryProduct = document.getElementById('inquiry-product');
+        
+        inquireButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const productName = button.getAttribute('data-product');
+                modalProductName.textContent = productName;
+                inquiryProduct.value = productName;
+                inquiryModal.classList.remove('hidden');
+            });
+        });
+        
+        closeModal.addEventListener('click', () => {
+            inquiryModal.classList.add('hidden');
+        });
+
+        // Success modal
+        const successModal = document.getElementById('success-modal');
+        const closeSuccessModal = document.getElementById('close-success-modal');
+        
+        closeSuccessModal.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+        });
+
+        // Form submission
+        const forms = document.querySelectorAll('form');
+        
+        forms.forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // In a real application, you would send the form data to a server here
+                // For this demo, we'll just show the success modal
+                
+                inquiryModal.classList.add('hidden');
+                successModal.classList.remove('hidden');
+                
+                // Reset the form
+                form.reset();
+            });
+        });
+
+        // Care Guide Modals
+        const guideLinks = document.querySelectorAll('a[href="#"]');
+        const careGuideModal = document.getElementById('care-guide-modal');
+        const closeGuideModal = document.getElementById('close-guide-modal');
+        const guideTitle = document.getElementById('guide-title');
+        const guideContent = document.getElementById('guide-content');
+
+        // Guide content data with images
+        const guides = {
+            'Perawatan Furnitur Kayu': {
+                title: 'Perawatan Furnitur Kayu',
+                image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80',
+                content: `
+                    <h4>Perawatan Harian dan Mingguan</h4>
+                    <p>Untuk perawatan harian, bersihkan debu pada furnitur kayu dengan kain mikrofiber atau kain katun lembut. Setiap minggu, gunakan kain yang sedikit lembap dengan air suling untuk menghapus sidik jari dan noda. Selalu lap searah serat kayu untuk menghindari goresan.</p>
+        
+                    <h4>Teknik Pembersihan Mendalam</h4>
+                    <p>Setiap 2-3 bulan, lakukan pembersihan lebih mendalam dengan larutan 1 sendok teh sabun cuci piring ringan per 1 liter air hangat. Peras kain hingga hampir kering sebelum mengelap. Segera keringkan dengan handuk bersih untuk mencegah kerusakan akibat air. Untuk noda membandel, gunakan pembersih kayu yang sesuai dengan jenis finishing Anda.</p>
+        
+                    <h4>Memoles dan Melindungi</h4>
+                    <p>Poles furnitur setiap 3-4 bulan menggunakan produk yang mengandung lilin lebah atau carnauba. Uji produk baru pada area tersembunyi terlebih dahulu. Oleskan dengan kain lembut secara melingkar, lalu gosok dengan kain bersih. Hindari semprotan aerosol karena dapat meninggalkan residu lengket.</p>
+        
+                    <h4Perlindungan Lingkungan</h4>
+                    <ul>
+                        <li>Jaga kelembapan antara 40-45% dengan humidifier atau dehumidifier sesuai kebutuhan</li>
+                        <li>Letakkan furnitur minimal 60 cm dari sumber panas dan jauh dari sinar matahari langsung</li>
+                        <li>Gunakan bantalan felt di bawah benda dekoratif untuk mencegah goresan</li>
+                        <li>Putar aksesori secara berkala untuk mencegah pemudaran tidak merata</li>
+                    </ul>
+        
+                    <h4>Perawatan Musiman</h4>
+                    <p>Di musim dingin yang kering, gunakan kondisioner kayu untuk mencegah retak. Saat musim panas lembap, pastikan sirkulasi udara di sekitar furnitur tetap baik. Periksa dan kencangkan perangkat keras secara musiman karena kayu bisa mengembang dan menyusut.</p>
+        
+                    <h4>Memperbaiki Kerusakan</h4>
+                    <p>Untuk goresan ringan:
+                    <ul>
+                        <li>Gosokkan daging kenari pada goresan dangkal</li>
+                        <li>Gunakan pewarna kayu dengan kapas untuk menutupi goresan</li>
+                        <li>Gunakan stik lilin pengisi untuk goresan lebih dalam</li>
+                    </ul>
+                    Untuk noda cincin air, coba metode mayones: oleskan sedikit, diamkan beberapa jam, lalu bersihkan. Untuk kerusakan parah, konsultasikan dengan ahli restorasi furnitur.</p>
+                `
+            },
+            'Tips Membersihkan Pelapis Furnitur': {
+                title: 'Tips Membersihkan Pelapis Furnitur',
+                image: 'https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
+                content: `
+                    <h4>Perawatan Harian dan Mingguan</h4>
+                    <p>Vakum pelapis furnitur setiap minggu dengan alat yang sesuai:
+                    <ul>
+                        <li>Gunakan sikat untuk kain yang lembut</li>
+                        <li>Gunakan alat celah untuk sudut dan jahitan</li>
+                        <li>Balikkan bantal duduk setiap bulan untuk pemakaian merata</li>
+                    </ul>
+                    Putar dan balik bantal setiap 3 bulan untuk menjaga bentuk dan distribusi beban secara merata.</p>
+        
+                    <h4>Pencegahan Noda</h4>
+                    <p>Gunakan pelindung kain saat pelapis masih baru dan ulangi setahun sekali. Segera blot tumpahan dengan kain putih bersih dari luar ke dalam. Untuk noda umum:
+                    <ul>
+                        <li>Noda berbasis air: Soda klub</li>
+                        <li>Noda berminyak: Pasta tepung maizena atau baking soda</li>
+                        <li>Tinta: Alkohol gosok (uji dulu)</li>
+                        <li>Anggur: Taburi garam, lalu bilas air dingin</li>
+                    </ul>
+                    Selalu uji solusi pembersih pada area tersembunyi terlebih dahulu.</p>
+        
+                    <h4>Pembersihan Mendalam</h4>
+                    <p>Setiap 3-6 bulan tergantung pemakaian:
+                    <ul>
+                        <li>Gunakan pembersih busa khusus pelapis untuk noda kecil</li>
+                        <li>Untuk pembersihan menyeluruh, gunakan steam cleaner dengan alat yang sesuai</li>
+                        <li>Biarkan kering sepenuhnya sebelum digunakan kembali (24-48 jam)</li>
+                    </ul>
+                    Hindari membasahi terlalu banyak karena dapat menyebabkan jamur atau penyusutan.</p>
+        
+                    <h4>Perawatan Profesional</h4>
+                    <p>Jadwalkan pembersihan profesional:
+                    <ul>
+                        <li>Setahun sekali untuk kain berwarna terang</li>
+                        <li>Setiap 18 bulan untuk kain berwarna gelap</li>
+                        <li>Segera setelah tumpahan besar</li>
+                    </ul>
+                    Simpan label kain untuk kode pembersihan (W, S, WS, atau X) dan berikan kepada profesional.</p>
+                `
+            },
+            'Menata Ruangan Kecil': {
+                title: 'Menata Ruangan Kecil',
+                image: 'https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
+                content: `
+                    <h4>Dasar-dasar Perencanaan Ruang</h4>
+                    <p>Mulailah dengan membuat denah lantai lengkap dengan ukuran yang akurat. Sisakan ruang untuk:
+                    <ul>
+                        <li>Jalur jalan kaki 90 cm di antara furnitur</li>
+                        <li>Jarak 45 cm antara meja kopi dan kursi</li>
+                        <li>Ruang tarik kursi makan sekitar 60 cm</li>
+                    </ul>
+                    Gunakan lakban untuk menandai jejak furnitur sebelum membeli.</p>
+        
+                    <h4>Solusi Furnitur Multifungsi</h4>
+                    <p>Maksimalkan setiap furnitur:
+                    <ul>
+                        <li>Ottoman penyimpanan dengan tutup yang bisa dibuka</li>
+                        <li>Tempat tidur lipat dengan rak bawaan</li>
+                        <li>Meja susun yang fleksibel</li>
+                        <li>Sofa bed dengan laci penyimpanan</li>
+                        <li>Meja dinding yang bisa dilipat</li>
+                    </ul>
+                    Pilih furnitur dengan kompartemen tersembunyi dan komponen yang dapat disesuaikan.</p>
+        
+                    <h4>Skala dan Proporsi</h4>
+                    <p>Pilih furnitur yang sesuai dengan ukuran ruangan:
+                    <ul>
+                        <li>Furnitur berprofil rendah memberi kesan tinggi</li>
+                        <li>Material kaca atau akrilik menjaga pandangan tetap terbuka</li>
+                        <li>Kaki furnitur yang terbuka memberikan kesan lega</li>
+                        <li>Meja bundar memperlancar alur lalu lintas</li>
+                    </ul>
+                    Hindari menumpuk terlalu banyak—sisakan ruang kosong untuk keseimbangan visual.</p>
+        
+                    <h4>Pemanfaatan Ruang Vertikal</h4>
+                    <p>Pikirkan ke atas:
+                    <ul>
+                        <li>Rak buku dari lantai ke langit-langit</li>
+                        <li>Meja dinding lipat</li>
+                        <li>Meja samping menggantung</li>
+                        <li>Organizer di atas pintu</li>
+                        <li>Rak tinggi untuk barang musiman</li>
+                    </ul>
+                    Gunakan sepertiga bagian atas dinding untuk pajangan atau penyimpanan.</p>
+        
+                    <h4>Trik Visual</h4>
+                    <p>Trik untuk memperluas tampilan ruang:
+                    <ul>
+                        <li>Cermin menghadap jendela menggandakan cahaya alami</li>
+                        <li>Lantai yang menyatu antar ruangan memberi kesan luas</li>
+                        <li>Tirai seragam memberi kesan tinggi</li>
+                        <li>Pencahayaan strategis menghilangkan sudut gelap</li>
+                        <li>Skema warna monokrom menyatukan ruang</li>
+                    </ul>
+                    Pertahankan pandangan terbuka dengan variasi tinggi furnitur.</p>
+                `
+            }
+        };
+        
+
+        guideLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const article = link.closest('article');
+                if (article) {
+                    const title = article.querySelector('h3').textContent;
+                    if (guides[title]) {
+                        guideTitle.textContent = guides[title].title;
+                        document.getElementById('guide-image').src = guides[title].image;
+                        document.getElementById('guide-image').alt = guides[title].title;
+                        guideContent.innerHTML = guides[title].content;
+                        careGuideModal.classList.remove('hidden');
+                    }
+                }z
+            });
+        });
+
+        closeGuideModal.addEventListener('click', () => {
+            careGuideModal.classList.add('hidden');
+        });
+
+        // Fungsi scroll halus untuk tautan jangkar
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Tutup menu mobile jika terbuka
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Fungsi tampilkan semua produk
+        const viewAllButton = document.getElementById('view-all-products');
+        const hiddenProducts = document.querySelectorAll('.product-card.hidden');
+        let productsVisible = false;
+
+        viewAllButton.addEventListener('click', () => {
+            if (!productsVisible) {
+                hiddenProducts.forEach(product => {
+                    product.classList.remove('hidden');
+                });
+                viewAllButton.textContent = 'Tampilkan Lebih Sedikit';
+                productsVisible = true;
+            } else {
+                hiddenProducts.forEach(product => {
+                    product.classList.add('hidden');
+                });
+                viewAllButton.textContent = 'Lihat Semua Produk';
+                productsVisible = false;
+            }
+        });
+    </script>
+</html>

@@ -1,0 +1,33 @@
+# System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Environment Files
+.env
+.env.local
+*.log
+
+# Dependency directories
+node_modules/
+vendor/
+
+# Build output
+dist/
+build/
+out/
+
+# Cache
+.cache/
+*.cache
+
+# Local XAMPP files
+.htaccess
+*.bak
